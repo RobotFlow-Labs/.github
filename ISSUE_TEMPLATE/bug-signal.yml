@@ -1,0 +1,44 @@
+name: "Bug Signal"
+description: "Report a system malfunction"
+title: "[BUG] "
+labels: ["bug-signal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## BUG SIGNAL // ROBOT FLOW LABS
+        Report a malfunction in one of our systems.
+  - type: input
+    id: module
+    attributes:
+      label: "Affected Module"
+      description: "Which module or system is affected?"
+      placeholder: "e.g., SPECTRA_X1, DATA_PIPELINE, MISSION_CONTROL"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Signal Description"
+      description: "Describe the issue clearly"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "Reproduction Steps"
+      description: "Steps to reproduce the behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      description: "What should happen instead?"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      placeholder: "OS, browser, version"
