@@ -1,0 +1,42 @@
+name: "Dataset Request"
+description: "Request access to POV data"
+title: "[DATA] "
+labels: ["dataset-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## DATASET REQUEST // ROBOT FLOW LABS
+        Request access to our POV data products.
+  - type: input
+    id: organization
+    attributes:
+      label: "Organization / Lab"
+      description: "Your institutional affiliation"
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: "Institutional Email"
+      description: "Your institutional email address"
+    validations:
+      required: true
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: "Dataset Category"
+      options:
+        - "MANIPULATION TASKS"
+        - "HUMAN-ENV INTERACTION"
+        - "LONG-HORIZON EPISODES"
+        - "MULTIPLE / ALL"
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: "Use Case"
+      description: "Describe your intended use of the data"
+    validations:
+      required: true
