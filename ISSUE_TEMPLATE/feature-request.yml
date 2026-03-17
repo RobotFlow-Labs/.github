@@ -1,0 +1,32 @@
+name: "Feature Request"
+description: "Propose a new capability"
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## FEATURE REQUEST // ROBOT FLOW LABS
+        Propose a new capability or enhancement.
+  - type: input
+    id: module
+    attributes:
+      label: "Target Module"
+      description: "Which module should this feature belong to?"
+      placeholder: "e.g., MISSION_CONTROL, DATA_PIPELINE"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposal"
+      description: "Describe the feature you'd like to see"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Rationale"
+      description: "Why is this feature needed?"
+    validations:
+      required: true
