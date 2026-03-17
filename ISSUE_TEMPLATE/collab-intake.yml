@@ -1,0 +1,41 @@
+name: "Collaboration Intake"
+description: "Propose a research or commercial collaboration"
+title: "[COLLAB] "
+labels: ["collaboration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## COLLABORATION INTAKE // ROBOT FLOW LABS
+        Propose a research or commercial partnership.
+  - type: input
+    id: organization
+    attributes:
+      label: "Organization"
+      description: "Your company, lab, or institution"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Collaboration Type"
+      options:
+        - "Research Partnership"
+        - "Data Licensing"
+        - "Hardware Integration"
+        - "Commercial Partnership"
+        - "Other"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposal Summary"
+      description: "Brief description of the proposed collaboration"
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: "Timeline & Scope"
+      description: "Expected timeline and scope of work"
